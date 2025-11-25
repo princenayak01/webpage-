@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Civil Engineering Books</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef2f3;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .book-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .book-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .book-card h3 {
+      margin: 10px 0 5px;
+    }
+    .book-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .book-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .book-card button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Civil Engineering Book Collection</h1>
+
+<div class="book-grid">
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.b8Xq1qLy8DX56ZESWttIHwHaLK?w=184&h=277&c=7&r=0&o=5&pid=1.7" alt="Structural Analysis">
+    <h3>Structural Analysis</h3>
+    <p>₹680</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.6obbWemJ0ObzB3F2RgjmvAHaLG?w=184&h=276&c=7&r=0&o=5&pid=1.7" alt="Surveying">
+    <h3>Surveying & Levelling</h3>
+    <p>₹520</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.YdNPO_CXzJqrKQ4cLIpilQHaKN?w=184&h=254&c=7&r=0&o=5&pid=1.7" alt="Concrete Technology">
+    <h3>Concrete Technology</h3>
+    <p>₹590</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.Nxy7pkOtFjtPLdEePksd-AHaJ4?w=184&h=245&c=7&r=0&o=7&pid=1.7&rm=3" alt="Hydraulics">
+    <h3>Hydraulics & Fluid Mechanics</h3>
+    <p>₹640</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.UEpYO1BXEHDxyGSnUI1fCwHaHa?w=184&h=184&c=7&r=0&o=7&pid=1.7&rm=3" alt="Transportation Engineering">
+    <h3>Transportation Engineering</h3>
+    <p>₹610</p>
+    <button>Add to Cart</button>
+  </div>
+</div>
+
+</body>
+</html>

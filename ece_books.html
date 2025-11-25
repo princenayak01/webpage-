@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ECE Book Collection</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .book-card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .book-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .book-card h3 {
+      margin: 10px 0 5px;
+    }
+    .book-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .book-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .book-card button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Electronics & Communication Engineering Book Collection</h1>
+
+<div class="book-grid">
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.X_a32GP50PqfnCodBegmIwAAAA?w=184&h=259&c=7&r=0&o=7&pid=1.7&rm=3" alt="Digital Electronics">
+    <h3>Digital Electronics</h3>
+    <p>₹590</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.aeLpaipkfAQSDCBJg9hKjAHaLZ?w=184&h=284&c=7&r=0&o=7&pid=1.7&rm=3" alt="Signals and Systems">
+    <h3>Signals and Systems</h3>
+    <p>₹640</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.IFIdBf5LRi6--ZZMAs5MsQHaJN?w=184&h=228&c=7&r=0&o=7&pid=1.7&rm=3" alt="Analog Circuits">
+    <h3>Analog Circuits</h3>
+    <p>₹610</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.4DhwrG6LcQbnoh1rit4gIgAAAA?w=184&h=260&c=7&r=0&o=7&pid=1.7&rm=3" alt="Communication Systems">
+    <h3>Communication Systems</h3>
+    <p>₹670</p>
+    <button>Add to Cart</button>
+  </div>
+  <div class="book-card">
+    <img src="https://th.bing.com/th/id/OIP.2WyfFzjo5TXnW4zCpYfi-QHaLZ?w=184&h=284&c=7&r=0&o=7&pid=1.7&rm=3 alt="VLSI Design">
+    <h3>VLSI Design</h3>
+    <p>₹720</p>
+    <button>Add to Cart</button>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style Selector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <h1>Customize Your Page</h1>
+
+    <form class="style-controls" onsubmit="return false;">
+      <div class="form-group">
+        <label for="fontStyle">Font Style:</label>
+        <select id="fontStyle" name="fontStyle">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="fontColor">Font Color:</label>
+        <input type="color" id="fontColor" name="fontColor" value="#000000">
+      </div>
+
+      <div class="form-group">
+        <label for="bgImage">Background Image URL:</label>
+        <input type="text" id="bgImage" name="bgImage" placeholder="Enter image URL">
+      </div>
+
+      <div class="button-group">
+        <button type="button" id="applyBtn" class="btn btn-primary">Apply Styles</button>
+        <button type="reset" id="resetBtn" class="btn">Reset</button>
+      </div>
+    </form>
+
+    <div id="preview" class="preview-box" aria-live="polite">
+      This is your preview area. Changes will be reflected here.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

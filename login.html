@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style> 
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e48e7e, #ACB6E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    input:focus {
+      border-color: #dd9d9d;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #df8080;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e96a90;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box" role="form" aria-labelledby="loginTitle">
+  <h2 id="loginTitle">Login</h2>
+  <form id="loginForm" novalidate>
+  <label for="username">Username</label>
+  <input type="text" id="username" placeholder="e.g. user@example.com" required />
+
+  <label for="password">Password</label>
+  <input type="password" id="password" placeholder="At least one uppercase letter and 8 characters" required />
+
+  <button type="submit">Login</button>
+  <button type="reset" style="margin-top:10px; background:#6c757d;">Reset</button>
+  <div class="error" id="errorMsg" aria-live="polite"></div>
+</form>
+
+    <div class="error" id="errorMsg" aria-live="polite"></div>
+  </form>
+</div>
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+  const errorMsg = document.getElementById("errorMsg");
+
+  if (!username.includes("@")) {
+    errorMsg.textContent = "Username must contain '@'.";
+    return;
+  }
+
+  if (!/[A-Z]/.test(password)) {
+    errorMsg.textContent = "Password must contain at least one uppercase letter.";
+    return;
+  }
+
+  if (password.length < 8) {
+    errorMsg.textContent = "Password must be at least 8 characters long.";
+    return;
+  }
+
+  errorMsg.textContent = "";
+  alert("Login successful!");
+});
+
+
+</script>
+
+</body>
+</html>

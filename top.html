@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SR Group of Institution — Top</title>
+  <style>
+    :root{
+      --bg1: #7ff3ed;
+      --bg2: #f5f2f2e5;
+      --accent: #7dddcd;
+      --muted: #27120afa;
+      --header-bg: rgba(122, 100, 247, 0.65);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      background: linear-gradient(90deg,var(--bg1),var(--bg2));
+      color: var(--accent);
+    }
+    .site-top{ max-width:1100px; margin:0 auto; padding:10px; }
+    .banner{ display:flex; align-items:center; gap:16px; background:var(--header-bg); color:#fff; padding:10px 16px; border-radius:8px; }
+    .logo{ height:64px; width:auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.25); transition:transform .25s ease; }
+    .logo:hover{ transform:scale(1.04); }
+    .brand{ font-size:1.25rem; margin:0; letter-spacing:.6px; font-weight:600; }
+    nav{ margin-top:12px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .nav-link{ color:var(--muted); text-decoration:none; font-weight:700; padding:6px 10px; border-radius:6px; transition:background .15s, color .15s; }
+    .nav-link:hover, .nav-link:focus{ background:rgba(235, 108, 108, 0.281); color:#fff; outline:none; box-shadow:0 0 0 3px rgba(124,221,205,.15); }
+    .skip-link{ position:absolute; left:-999px; top:auto; background:#000; color:#fff; padding:8px; z-index:1000; }
+    .skip-link:focus{ left:8px; top:8px; border-radius:4px; }
+    @media (max-width:600px){
+      .banner{ flex-direction:column; align-items:flex-start; }
+      .brand{ font-size:1rem; }
+      .logo{ height:56px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-top" role="banner">
+    <header class="banner">
+      <img class="logo" src="https://yt3.googleusercontent.com/Pawl9NDHS39ahtdFbEnHa8hIRmuGgg6LDwx3hvMLdT_Y7nsM3zFtej-Jd1TFLEwVx08f0cjC=s900-c-k-c0x00ffffff-no-rj" alt="SR Group of Institution logo" loading="lazy">
+      <h1 class="brand">SR GROUP OF INSTITUTION JHANSI</h1>
+    </header>
+
+    <nav role="navigation" aria-label="Main navigation">
+      <a class="nav-link" href="index.html" target="_top">Home</a>
+      <a class="nav-link" href="login.html" target="rightFrame">Login</a>
+      <a class="nav-link" href="registration.html" target="rightFrame">Registration</a>
+      <a class="nav-link" href="catalog.html" target="rightFrame">Catalog</a>
+      <a class="nav-link" href="cart.html" target="rightFrame">Cart</a>
+    </nav>
+  </div>
+
+  <main id="main" hidden></main>
+</body>
+</html>

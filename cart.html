@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Book Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;    }
+    h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background: white;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<h2>College Book Cart</h2>
+
+<table id="cartTable">
+  <thead>
+    <tr>
+      <th>Book Title</th>
+      <th>Price (₹)</th>
+      <th>Quantity</th>
+      <th>Subtotal (₹)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Engineering Mathematics</td>
+      <td>500</td>
+      <td><input type="number" value="1" min="1" onchange="updateCart()"></td>
+      <td class="subtotal">500</td>
+    </tr>
+    <tr>
+      <td>Physics for Engineers</td>
+      <td>450</td>
+      <td><input type="number" value="1" min="1" onchange="updateCart()"></td>
+      <td class="subtotal">450</td>
+    </tr>
+    <tr>
+      <td>Computer Fundamentals</td>
+      <td>600</td>
+      <td><input type="number" value="1" min="1" onchange="updateCart()"></td>
+      <td class="subtotal">600</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="total">
+  <strong>Total: ₹<span id="totalAmount">1550</span></strong>
+</div>
+
+<div style="text-align: center; margin-top: 30px;">
+  <button onclick="checkout()">Proceed to Checkout</button>
+</div>
+
+<script>
+  function updateCart() {
+    const rows = document.querySelectorAll("#cartTable tbody tr");
+    let total = 0;
+
+    rows.forEach(row => {
+      const price = parseFloat(row.cells[1].textContent);
+      const qty = parseInt(row.cells[2].querySelector("input").value);
+      const subtotal = price * qty;
+      row.cells[3].textContent = subtotal;
+      total += subtotal;
+    });
+
+    document.getElementById("totalAmount").textContent = total;
+  }
+
+  function checkout() {
+    alert("Thank you! Your order has been placed.");
+  }
+
+  // Initial calculation
+  updateCart();
+</script>
+</body>
+</html>
+ html
